@@ -4,4 +4,19 @@
 
   background-repeat: no-repeat;
   background-size: cover;
+
+  align-items: center;
+
+  margin: 4px;
+
+  transition: all 400ms;
+}
+
+.movie-item:hover {
+  
+}
+
+.movie-item.selected {
+  width: 370px;
+  height: 556px;
 }

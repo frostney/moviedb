@@ -1,5 +1,6 @@
 .movie-list {
-  flex: 5;
+  flex: 8;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow-y: auto;
 }
