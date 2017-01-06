@@ -10,13 +10,21 @@
   margin: 4px;
 
   transition: all 400ms;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 
 .movie-item:hover {
-  
+  filter: brightness(0.75);
+  box-shadow: 0 0 8px #fff;
+  border-color: white;
 }
 
 .movie-item.selected {
   width: 370px;
   height: 556px;
+
+  box-shadow: 0 0 8px #fff;
+  border-color: white;
 }

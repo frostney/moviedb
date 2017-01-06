@@ -15,6 +15,7 @@ class App extends Component {
   state = {
     backdropImage: '',
     items: [],
+    searchbarInput: '',
   }
 
   componentDidMount() {
@@ -28,12 +29,20 @@ class App extends Component {
     });
   }
 
+  onSearchbarChange = (event) => {
+    this.setState({ searchbarInput: event.target.value });
+  }
+
   render(): React.Element<*> {
+    const filteredItems = this.state.items.filter(item => {
+      return item.title.toLowerCase().indexOf(this.state.searchbarInput) >= 0;
+    })
+
     return (
       <div className="container">
         <Backdrop url={this.state.backgroundImage} />
-        <Header />
-        <MovieList items={this.state.items} />
+        <Header onSearchbarChange={this.onSearchbarChange} />
+        <MovieList items={filteredItems} />
       </div>
     );
   }
