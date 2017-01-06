@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const Searchbar = () => (
+const Searchbar: () => React.Element<*> = () => (
   <input />
 );
 

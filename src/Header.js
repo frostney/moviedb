@@ -5,7 +5,7 @@ import React from 'react';
 import Searchbar from './Searchbar';
 import './Header.css';
 
-const Header = () => (
+const Header: () => React.Element<*> = () => (
   <div className="header">
     <Searchbar />
   </div>

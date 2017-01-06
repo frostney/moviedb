@@ -4,7 +4,7 @@ import React from 'react';
 
 import './MovieItem.css';
 
-const MovieItem = () => (
+const MovieItem: () => React.Element<*> = () => (
   <div className="movie-item"></div>
 )
 

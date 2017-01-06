@@ -7,7 +7,7 @@ import MovieList from './MovieList';
 
 import './App.css';
 
-const App = () => (
+const App: () => React.Element<*> = () => (
   <div className="container">
     <Header />
     <MovieList />
