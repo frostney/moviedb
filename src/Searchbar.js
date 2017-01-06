@@ -2,8 +2,10 @@
 
 import React from 'react';
 
+import './Searchbar.css';
+
 const Searchbar: () => React.Element<*> = () => (
-  <input />
+  <input className="searchbar" />
 );
 
 export default Searchbar;

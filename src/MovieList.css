@@ -1,3 +1,5 @@
 .movie-list {
   flex: 5;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
