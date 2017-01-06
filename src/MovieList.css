@@ -1,6 +1,27 @@
 .movie-list {
   flex: 8;
+  overflow-y: auto;
+}
+
+.movie-list > span {
   flex-direction: row;
   flex-wrap: wrap;
-  overflow-y: auto;
+}
+
+.movie-item-enter {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.movie-item-enter.movie-item-enter-active {
+  opacity: 1;
+}
+
+.movie-item-leave {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.movie-item-leave.movie-item-leave-active {
+  opacity: 0.01;
 }
