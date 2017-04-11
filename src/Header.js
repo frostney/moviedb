@@ -5,7 +5,11 @@ import React from 'react';
 import Searchbar from './Searchbar';
 import './Header.css';
 
-const Header: () => React.Element<*> = ({ onSearchbarChange }) => (
+type Props = {
+  onSearchbarChange: (event: Object) => {},
+};
+
+const Header: (Props) => React.Element<*> = ({ onSearchbarChange }: Props) => (
   <div className="header">
     <Searchbar onChange={onSearchbarChange} />
   </div>

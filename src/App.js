@@ -9,11 +9,19 @@ import MovieList from './MovieList';
 import Api from './Api';
 import generateImageName from './generateImageName';
 
+import type { ApiResponse, Item } from './types';
+
 import './App.css';
 
+type State = {
+  backgroundImage: string,
+  items: Array<Item>,
+  searchbarInput: string,
+};
+
 class App extends Component {
-  state = {
-    backdropImage: '',
+  state: State = {
+    backgroundImage: '',
     items: [],
     searchbarInput: '',
   }
@@ -21,15 +29,15 @@ class App extends Component {
   componentDidMount() {
     // fetch on `didMount` because of
 
-    Api.getList(1).then(result => {
-      this.setState({
+    Api.getList(1).then((result: ApiResponse) => {
+      this.setState((prevState: State) => ({
         backgroundImage: result.backdrop_path,
         items: result.results,
-      })
+      }))
     });
   }
 
-  onSearchbarChange = (event) => {
+  onSearchbarChange = (event: Object) => {
     this.setState({ searchbarInput: event.target.value });
   }
 

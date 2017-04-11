@@ -10,7 +10,7 @@ type Props = {
   url: string,
 };
 
-const Backdrop: (Props) => ?React.Element = ({ url }: Props) => {
+const Backdrop: (Props) => ?React.Element<*> = ({ url }: Props) => {
   if (!url) {
     return null;
   }
