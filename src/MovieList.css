@@ -6,6 +6,7 @@
 .movie-list > span {
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .movie-item-enter {
